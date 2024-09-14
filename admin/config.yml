@@ -1,0 +1,17 @@
+backend:
+  name: github
+  repo: hahaland/test-cms # GitHub 仓库地址
+  branch: main # 编辑的分支
+
+media_folder: 'docs/.vuepress/public/uploads' # 上传的媒体文件路径
+public_folder: '/uploads' # 公共媒体资源的访问路径
+
+collections:
+  - name: 'blog'
+    label: 'Blog'
+    folder: 'docs' # Markdown 文件的路径
+    create: true # 是否允许创建新文档
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
